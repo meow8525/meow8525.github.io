@@ -3,37 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>實驗室首頁</title>
+  <title>Homepage</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">實驗室名稱</h1>
-      <nav>
-        <a href="#about">關於</a>
-        <a href="#research">研究</a>
-        <a href="#team">團隊</a>
-        <a href="#contact">聯絡</a>
-      </nav>
+    <div class="container_header">
+      <div class="header_anch">
+        <div class="header-lab">
+          <span class="lab-en">NCYU CCS</span>
+          <span class="lab-name">實驗室名稱</span>
+        </div>
+        <div class="header-links">
+          <a href="LAB.html" class="header">Lab</a>
+          <a href="Research.html" class="header">Research</a>
+          <a href="Teaching.html" class="header">Teaching</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h2>探索未來科學</h2>
-      <p>我們專注於最前沿的研究與技術應用。</p>
-      <a class="btn" href="#research">了解更多</a>
+      <h2>Computational Intelligence and Image Analysis Lab</h2>
+      <p class="whiteContent">Prof photo(after)</p>
+      <p class="whiteContent">Contact : @</p>
     </div>
   </section>
 
   <section id="about" class="about container">
-    <h3>關於我們</h3>
-    <p>實驗室簡介文字，目的、使命等等。</p>
+    <h3 class="title">關於我們</h3>
+    <p class="content">實驗室簡介文字，目的、使命等等。</p>
   </section>
 
   <section id="research" class="research container">
-    <h3>研究方向</h3>
+    <h3 class="title">Research</h3>
     <div class="grid">
       <div class="card">
         <h4>領域一</h4>
@@ -51,7 +55,7 @@
   </section>
 
   <section id="team" class="team container">
-    <h3>研究團隊</h3>
+    <h3>Teaching</h3>
     <div class="grid">
       <div class="card">
         <img src="member1.jpg" alt="成員1"/>
@@ -72,7 +76,7 @@
   </section>
 
   <section id="contact" class="contact container">
-    <h3>聯絡我們</h3>
+    <h3>LAB</h3>
     <form>
       <input type="text" placeholder="姓名" required/>
       <input type="email" placeholder="Email" required/>
