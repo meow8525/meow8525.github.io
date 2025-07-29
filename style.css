@@ -9,16 +9,26 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
 /* header */
 header { background:#fff; padding:1em 0; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
 header .logo { float:left; color:#1976D2; } /* 原 #77DD77 改藍色 */
-header a { float:right; margin-left:1em; color:#1565C0; text-decoration:none; }
+header a { float:right; margin-left:0.5em; color:#1565C0; text-decoration:none; }
 /* hero */
 .hero {
     background: url('graduate_homepage_background.jpg') center center/cover no-repeat;
     padding: 5em 0;
     text-align: center;
 }
-.hero h2 { font-size:3rem; color:#ffffff; }
+.hero h2 { font-size:3rem; color:#ffffff; margin-bottom: 1.5em;}
 .hero p { margin:1em 0; }
 .btn { background:#1976D2; color:white; padding:0.8em 6em; text-decoration:none; border-radius:4px; }
+
+.hero_res {
+    background: #006d7c;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.hero_res h2 { font-size:4rem; color:#ffffff; margin-bottom: 0.1em;}
+.hero_res p { margin:1em 0; }
+
 /* sections*/
 section { padding:3em 0; }
 h3 { margin-bottom:1em; color:#1976D2; } 
@@ -129,7 +139,7 @@ section {
 .header-links {
     margin-left: auto; /* 右側三個 a 靠右 */
     display: flex;
-    gap: 1em;
+    gap: 0.1em;
 }
 
 .header-links a.header {
@@ -142,15 +152,21 @@ section {
     border-radius: 0;
 }
 
+.header-links a.header.active {
+    background: #fff;
+    color: #1565C0;
+}
+
 .header-links a.header:hover {
-    background: #1565C0;
+    background: #fff;
+    color: #1565C0;
 }
 
 .header-lab {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 6em;
+    margin-left: 3em;
 }
 
 .lab-en {
@@ -163,6 +179,9 @@ section {
     font-size: 1.2rem;
     color: #fff;
     margin-top: 0.2em;
+    margin-left: 1em;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
 }
 
 .header_anch p.header {
@@ -187,6 +206,136 @@ section {
     display: inline-block;
 }
 
-.header_anch a.header:hover {
-    background: #1565C0;
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 10em;
+    padding-right: 10vw; /* 向右偏移，可調整數值 */
+}
+.about-img {
+    width: 260px;
+    max-width: 40vw;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    object-fit: cover;
+}
+.about-flex .content {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #555;
+}
+.about-img-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-img-caption {
+    margin-top: 0.7em;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+/* 手機響應式 */
+@media (max-width: 700px) {
+    .about-flex {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .about-img {
+        width: 90vw;
+        max-width: 100%;
+    }
+    .about-flex .content {
+        text-align: center;
+    }
+}
+
+.feature-list-section {
+    padding: 2em 0 1em 0;
+}
+.feature-list {
+    list-style-type: disc;
+    padding-left: 2em;
+    margin: 0;
+    color: #1976D2;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.feature-list li {
+    margin-bottom: 0.7em;
+}
+
+.research-item {
+    margin-bottom: 2.5em;
+}
+.research-item h4 {
+    color: #000;
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.research-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 5em;
+}
+
+.research-img {
+    width: 384px;
+    max-width: 108vw;
+    border-radius: 0px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.research-desc {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+    flex: 1;
+}
+@media (max-width: 700px) {
+    .research-flex {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .research-img {
+        width: 90vw;
+        max-width: 100%;
+    }
+}
+
+.footer-gap {
+    height: 6em;
+}
+
+.lab-photo-section {
+    text-align: center;
+    margin-bottom: 3em;
+}
+.lab-main-photo {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    margin-bottom: 1em;
+}
+.lab-photo-caption {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.2em;
+    margin-bottom: 5em;
+}
+
+.header-lab-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.header-lab-link:hover .lab-en,
+.header-lab-link:hover .lab-name {
+    text-decoration: none;
+    opacity: 0.8;
 }
