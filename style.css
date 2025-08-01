@@ -321,6 +321,14 @@ h3.past{
     font-size: 1.3rem;
 }
 
+.research-desc a.link {
+    color: #000;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-left: 0.7em;
+    font-size: 1.1rem;
+}
+
 @media (max-width: 1400px) {
     .research-flex {
         flex-direction: column;
@@ -395,4 +403,18 @@ h3.past{
 }
 .teaching-list li {
     margin-bottom: 0.7em;
+}
+
+.see-more-btn {
+    background: #1976D2;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.see-more-btn:hover {
+    background: #1565C0;
 }
