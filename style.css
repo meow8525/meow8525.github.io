@@ -4,7 +4,7 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
 /* 容器 */
 .container_header { width:100%; max-width:100000px; margin:0 auto; }
 
-.container { width:70%; max-width:2000px; margin:0 auto; padding:0 1em; }
+.container { width:80%; max-width:2000px; margin:0 auto; padding:0 1em; }
 
 /* header */
 header { background:#fff; padding:1em 0; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
@@ -215,7 +215,7 @@ section {
 .about-img {
     width: 260px;
     max-width: 40vw;
-    border-radius: 12px;
+    border-radius: 250px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     object-fit: cover;
 }
@@ -268,39 +268,68 @@ section {
 .research-item {
     margin-bottom: 2.5em;
 }
+
+.research-item h3 {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+h3.past{
+    text-align: center;
+    font-size: 3rem;
+    color: #000; 
+    margin-top: 2em;
+}
+
 .research-item h4 {
     color: #000;
     margin-bottom: 1em;
+    margin-top: 2em;
     font-size: 1.8rem;
     text-align: center;
 }
+
 .research-flex {
     display: flex;
     align-items: flex-start;
     gap: 5em;
+    justify-content: center;
 }
 
 .research-img {
-    width: 384px;
+    width: 600px;
     max-width: 108vw;
     border-radius: 0px;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
 .research-desc {
     font-size: 1.1rem;
     color: #555;
     text-align: left;
-    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
 }
-@media (max-width: 700px) {
+
+.research-desc p.select {
+    color: #000;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 1400px) {
     .research-flex {
         flex-direction: column;
         gap: 1em;
     }
     .research-img {
-        width: 90vw;
+        width: 600px;
         max-width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -338,4 +367,32 @@ section {
 .header-lab-link:hover .lab-name {
     text-decoration: none;
     opacity: 0.8;
+}
+
+.reference-list {
+    margin-top: 1em;
+    padding-left: 1.5em;
+    color: #000;
+    font-size: 1rem;
+}
+.reference-list li {
+    margin-bottom: 0.5em;
+}
+
+.teaching-title {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1em;
+}
+.teaching-list {
+    max-width: 1200px;
+    margin: 0 auto 2em auto;
+    font-size: 1.3rem;
+    color: #000;
+    list-style-type: disc;
+    padding-left: 1em;
+}
+.teaching-list li {
+    margin-bottom: 0.7em;
 }
