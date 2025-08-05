@@ -209,12 +209,13 @@ section {
 .about-flex {
     display: flex;
     align-items: center;
-    gap: 10em;
+    gap: 20em;
     padding-right: 10vw; /* 向右偏移，可調整數值 */
 }
 .about-img {
     width: 260px;
     max-width: 40vw;
+    margin-left: 18em;
     border-radius: 250px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     object-fit: cover;
@@ -232,6 +233,7 @@ section {
 .about-img-caption {
     margin-top: 0.7em;
     font-size: 1rem;
+    margin-left: 18em;
     color: #555;
     text-align: center;
 }
@@ -243,7 +245,7 @@ section {
     }
     .about-img {
         width: 90vw;
-        max-width: 100%;
+        max-width: 80%;
     }
     .about-flex .content {
         text-align: center;
@@ -299,7 +301,7 @@ h3.past{
 }
 
 .research-img {
-    width: 600px;
+    width: 450px;
     max-width: 108vw;
     border-radius: 0px;
     object-fit: cover;
@@ -396,7 +398,7 @@ h3.past{
 .teaching-list {
     max-width: 1200px;
     margin: 0 auto 2em auto;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: #000;
     list-style-type: disc;
     padding-left: 1em;
