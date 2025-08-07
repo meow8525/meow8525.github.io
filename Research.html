@@ -36,16 +36,32 @@
 
   <section class="feature-list-section">
     <div class="container">
+      <div class="research-filter-bar">
+        <div class="dropdown filter-dropdown">
+          <button class="dropbtn">Ongoing Research ▼</button>
+          <div class="dropdown-content">
+            <a href="#ongoing1">People detection and analysis in top-view fisheye camera images</a>
+            <a href="#ongoing2">Localization and augmented reality visualization technology for dialysis fistula</a>
+          </div>
+        </div>
+        <div class="dropdown filter-dropdown">
+          <button class="dropbtn">Past Research ▼</button>
+          <div class="dropdown-content">
+            <a href="#past1">Shell clustering algorithms for arbitrary shapes</a>
+            <a href="#past2">Simulated car racing games</a>
+          </div>
+        </div>
+      </div>
       <div class="research-item">
         <h3 class="title">Ongoing Research</h3>
-        <h4>People detection and analysis in top-view fisheye camera images</h4>
+        <h4 id="ongoing1">People detection and analysis in top-view fisheye camera images</h4>
         <div class="research-flex">
           <img src="picFisheyePerson.JPG" class="research-img">
           <div class="research-desc">
             <span class="research-summary">
               We extend existing people detection and segmentation methods to top-view fisheye camera images. More recent projects include pose and action recognitions in such images.
             </span>
-            <span class="research-more" style="display:none;">
+            <span class="research-more">
               <p class="select">Selected publications:</p>
               <ul class="reference-list">
                 <li>
@@ -63,14 +79,14 @@
         </div>
       </div>
       <div class="research-item">
-        <h4>Localization and augmented reality visualization technology for dialysis fistula</h4>
+        <h4 id="ongoing2">Localization and augmented reality visualization technology for dialysis fistula</h4>
         <div class="research-flex">
           <img src="picDialysisFistula.JPG" class="research-img">
           <div class="research-desc">
             <span class="research-summary">
               The integrated presentation of the vascular centerline obtained by multi-angle X-ray angiography and the external 3D scanning results. The localization accuracy is evaluated by using a metal as a simulated blood vessel. The error is less than the diameter of the blood vessel, which has practical value.
             </span>
-            <span class="research-more" style="display:none;">
+            <span class="research-more">
               <p class="select">Selected publications:</p>
               <ul class="reference-list">
                 <li>Yu-Chi Chen, Chiu-Yang Lee, Tai-Wei Chen, Jie-Shi Tsai, Tsaipei Wang (2024, Jul). 3D Vessel Visualization Techniques for Dialysis Fistulae. 46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society.<a href="https://ieeexplore.ieee.org/abstract/document/10781754" class="link">LINK</a></li>
@@ -82,14 +98,14 @@
       </div>
       <div class="research-item">
         <h3 class="past">Past Research</h3>
-        <h4>Shell clustering algorithms for arbitrary shapes</h4>
+        <h4 id="past1">Shell clustering algorithms for arbitrary shapes</h4>
         <div class="research-flex">
           <img src="picShellClustering.JPG" class="research-img">
           <div class="research-desc">
             <span class="research-summary">
               We developed shell clustering algorithm using template-based prototypes and alternating optimization. We were the first to apply shell clustering to such data. The latest achievement is to cluster highly elastic templates, which further breaks through the shape limitations that could be used for object detection in the past and can be used to detect objects with different degrees of deformation.
             </span>
-            <span class="research-more" style="display:none;">
+            <span class="research-more">
               <p class="select">Selected publications:</p>
               <ul class="reference-list">
                 <li>Tsaipei Wang, Wen-Liang Hung (2016, Jul). A generalized possibilistic approach to shell clustering of template-based shapes. Journal of Statistical Computation and Simulation, 87(3), 423-436.<a href="https://www.tandfonline.com/doi/abs/10.1080/00949655.2016.1209202" class="link">LINK</a></li>
@@ -101,15 +117,14 @@
         </div>
       </div>
       <div class="research-item">
-        <h4>Simulated car racing games</h4>
+        <h4 id="past2">Simulated car racing games</h4>
         <div class="research-flex">
           <img src="picCarRacing.JPG" class="research-img">
           <div class="research-desc">
             <span class="research-summary">
-              We studied various topics related to simulated car racing games, including optimization methods for driving behaviors.
+              We studied various topics related to simulated car racing games, including optimization methods for driving behaviors as well as recognition and emulation of human players.
             </span>
-            <span class="research-more" style="display:none;">
-              as well as recognition and emulation of human players.
+            <span class="research-more">
               <p class="select">Selected publications:</p>
               <ul class="reference-list">
                 <li>Han-Hsien Huang, Tsaipei Wang (2015, Sep). Learning Overtaking and Blocking Skills in Simulated Car Racing. 2015 IEEE Conference on Computational Intelligence and Games (CIG)<a href="https://ieeexplore.ieee.org/abstract/document/7317916" class="link">LINK</a></li>
@@ -132,12 +147,15 @@
 document.querySelectorAll('.see-more-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var desc = btn.parentElement;
+    var summary = desc.querySelector('.research-summary');
     var more = desc.querySelector('.research-more');
-    if (more.style.display === 'none' || more.style.display === '') {
-      more.style.display = 'inline';
+    if (btn.textContent === 'See more') {
+      summary.classList.add('expanded');
+      more.classList.add('expanded');
       btn.textContent = 'See less';
     } else {
-      more.style.display = 'none';
+      summary.classList.remove('expanded');
+      more.classList.remove('expanded');
       btn.textContent = 'See more';
     }
   });
