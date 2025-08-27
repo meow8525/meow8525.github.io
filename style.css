@@ -12,7 +12,7 @@ header .logo { float:left; color:#1976D2; } /* 原 #77DD77 改藍色 */
 header a { float:right; margin-left:0.5em; color:#1565C0; text-decoration:none; }
 /* hero */
 .hero {
-    background: url('graduate_homepage_background.jpg') center center/cover no-repeat;
+    background: url('title_bkgd.jpg') center center/cover no-repeat;
     padding: 5em 0;
     text-align: center;
 }
@@ -477,7 +477,7 @@ h3.past{
 
 .teaching-title {
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #000;
     margin-bottom: 1em;
 }
@@ -491,6 +491,14 @@ h3.past{
 }
 .teaching-list li {
     margin-bottom: 0.7em;
+}
+
+.research-additional a.link {
+    color: #000;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-left: 0.7em;
+    font-size: 1.8rem;
 }
 
 /* 手機響應式 */
@@ -548,8 +556,17 @@ h3.past{
         align-items: stretch;
         width: 100%;
     }
+
+    .teaching-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #000;
+        margin-bottom: 1em;
+    }
+
     .teaching-list {
         font-size: 1.5rem;
+        margin-left: 1em;
     }
     .filter-dropdown .dropbtn {
         font-size: 1.1rem;
